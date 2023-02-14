@@ -1,0 +1,105 @@
+#Question 1
+import random
+
+def longest(list):
+    length = len(list[0])
+    lword = list[0]
+
+    for i in list:
+        if (len(i) > length):
+            length = len(i)
+            lword = i
+           
+
+    print("The longest word is " + lword )
+
+list= ["apple", "chestnut", "gargoyle", "pandas", "sheep", "raptor"]
+longest(list)
+
+#Question 2
+
+wordfile = open("/Users/christophersullivan/Documents/Harp_151/Labs/sowpods.txt")
+
+def genword(file):
+    randline = random.choice(open(file).read().split('\n'))
+    return randline
+
+newlist=[]
+
+for i in range(0,7):
+    newlist.append(genword(wordfile))
+
+print(newlist)
+
+#Question 3
+
+poketype = {"Charmander" : "Fire", "Squirtle": "Water", "Pikachu": "Electric"}
+
+print(poketype.get("Charmander"))
+
+print(poketype.keys())
+
+print(poketype.copy())
+
+print(poketype.items())
+
+#Question 4
+
+class Mage:
+    def __init__(self, name, health, power): #I wanted to make a video game character, so these attributes seemed fun to use
+        self.name = name
+        self.health = health 
+        self.power = power
+
+    def final_health(self, damage): #I wanted to have it so the health would change afterwards
+        self.health = self.health - damage
+        print(self.health)
+
+    def healing(self, heals): #I wanted to have it so you can add to the health (healing)
+        self.health = self.health - heals
+        print(self.health)
+    
+    def potion(self, buff): #I wanted to have it so you could make your power stronger
+        self.power = self.power + buff
+
+m1= Mage("Harry", 100, 100)
+m1.final_health(30)
+
+#Question 5
+
+correct = "Bake"
+alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m',
+'n','o','p','q','r','s','t','u','v','w','x','y','z']
+tries = 5
+letters_correct = 0
+hangman = []
+
+for letter in correct:
+    hangman.append(letter)
+print(hangman)
+length = len(hangman)
+
+while tries > a:
+    if letters_correct == length:
+        print("You win!")
+        break
+    guess = input("Guess a letter: ")
+    if guess in alphabet:
+        if guess in correct:
+            print(guess + " is correct!")
+            place = correct.index(guess)
+            print("Your letter is at", place)
+            alphabet.remove(guess)
+            letters_correct += 1
+        else:
+            print(guess + " is not correct!")
+            alphabet.remove(guess)
+            Tries = Tries - 1
+    else:
+        print("You have already guessed this letter!")
+
+if Tries == 0:
+    print("Nice try!")
+
+
+
