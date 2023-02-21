@@ -1,0 +1,79 @@
+*{
+
+    font-family: Arial, Helvetica, sans-serif;
+} /* global selector*/
+
+body{
+
+    background-color:lightblue; 
+    font-family:'Courier New', Courier, monospace;
+    text-align:center; color: lightseagreen
+    
+}
+
+div{
+    height:50px;
+    width:50px;
+
+}
+/* local*/
+#pinklarge{
+    color: lightpink;
+    font-size:larger
+} /* local*/
+#pink{
+    color: lightpink
+}
+/* local*/
+#green{
+    color:lightgreen;
+    font-size:medium
+}
+/* local*/
+#blue{color:aqua}
+/* local*/
+#orange{
+    color:lightsalmon
+}
+/* local*/
+.goblin{
+    background-color:black;
+    color:purple;
+    font-weight: 300;/* Did not use in class*/
+}
+/* local*/
+.flowerboy{
+    background-color: orange;
+    color:azure;
+    font-weight: 900;
+    text-shadow: 100px; /* Did not use in class*/
+    text-emphasis: 100px;
+    text-emphasis-color: blue;
+}
+
+/* local*/
+.cmifygl{
+    background-color: darkgreen;
+    color:darkcyan;
+    font-weight: 800;
+}
+/* local*/
+.list1{
+    border: 2px greenyellow;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 25px;
+    margin-right: 50px;
+    margin-bottom: 25px;
+    margin-left: 50px;
+}
+/* local*/
+.list2{
+    border: 2px firebrick;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 25px;
+    margin-right: 50px;
+    margin-bottom: 25px;
+    margin-left: 50px;
+}
